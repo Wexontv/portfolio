@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title id="page-title">Projekt | Wiktor Piekarz</title>
+    <link rel="stylesheet" href="PlayCanvasStyle.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo-link"><div class="logo">← Powrót do portfolio</div></a>
+    </nav>
+
+    <header class="project-header">
+        <div class="hero-container">
+            <!-- Główny obrazek projektu -->
+            <img id="main-screen-img" src="" alt="Główny ekran projektu" class="main-screen">
+        </div>
+        <div class="project-desc">
+            <h1 id="project-title">Ładowanie...</h1>
+            <p id="project-description">Trwa pobieranie opisu projektu...</p>
+        </div>
+    </header>
+
+    <section class="gallery">
+        <h2>Galeria projektu</h2>
+        <!-- Galeria kafli generowana dynamicznie przez JS -->
+        <div class="projekty-grid" id="gallery-container">
+            <!-- Tutaj wskoczą zdjęcia z JSON-a -->
+        </div>
+    </section>
+
+    <div class="project-desc">
+        <!-- Przycisk pobierania (ukryje się automatycznie, jeśli projekt nie ma pliku zip) -->
+        <a id="download-btn" href="#" class="btn-download" download style="display: none;">
+            Pobierz plik projektu (.zip)
+        </a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Wiktor Piekarz | Portfolio</p>
+    </footer>
+
+    <div id="lightbox" class="modal">
+        <img class="modal-content" id="full-img">
+    </div>
+
+    <!-- Skrypt dynamicznie ładujący dane oraz obsługujący Lightbox -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // 1. Odczytujemy ID projektu z adresu URL (np. projekt.html?id=projekt-reset)
+            const urlParams = new URLSearchParams(window.location.search);
+            const projectId = urlParams.get("id");
+
+            // 2. Pobieramy dane z pliku projects.json
+            fetch("projects.json")
+                .then(response => response.json())
+                .then(projects => {
+                    const project = projects.find(p => p.id === projectId);
+
+                    if (project) {
+                        // Podmieniamy tytuł strony i nagłówek
+                        document.getElementById("page-title").textContent = `${project.title} | Wiktor Piekarz`;
+                        document.getElementById("project-title").textContent = project.title;
+                        document.getElementById("project-description").textContent = project.longDescription || project.description;
+                        
+                        // Główny screen (jeśli nie podano osobnego w JSONie, bierze pierwsze zdjęcie z galerii)
+                        const mainImg = project.mainImage || (project.gallery && project.gallery[0]) || project.image;
+                        document.getElementById("main-screen-img").src = mainImg;
+
+                        // Generowanie galerii zdjęć
+                        const galleryContainer = document.getElementById("gallery-container");
+                        galleryContainer.innerHTML = ""; // Czyszczenie
+
+                        if (project.gallery && project.gallery.length > 0) {
+                            project.gallery.forEach(imgSrc => {
+                                const kafelek = document.createElement("div");
+                                kafelek.className = "kafelek";
+                                kafelek.innerHTML = `<img src="${imgSrc}" alt="Zdjęcie z galerii">`;
+                                galleryContainer.appendChild(kafelek);
+                            });
+                        }
+
+                        // Obsługa przycisku pobierania
+                        const downloadBtn = document.getElementById("download-btn");
+                        if (project.downloadLink) {
+                            downloadBtn.href = project.downloadLink;
+                            downloadBtn.style.display = "inline-block"; // Pokaż przycisk
+                        }
+
+                        // Uruchomienie obsługi Lightboxa dla nowo wstawionych zdjęć
+                        initLightbox();
+
+                    } else {
+                        document.getElementById("project-title").textContent = "Nie znaleziono projektu";
+                        document.getElementById("project-description").textContent = "Przepraszamy, taki projekt nie istnieje lub został usunięty.";
+                    }
+                })
+                .catch(error => console.error("Błąd podczas ładowania danych projektu:", error));
+        });
+
+        // Funkcja obsługująca powiększanie zdjęć (Lightbox)
+        function initLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            const fullImg = document.getElementById('full-img');
+            // Łapiemy zarówno główny screen, jak i zdjęcia w galerii
+            const images = document.querySelectorAll('.main-screen, .kafelek img');
+
+            images.forEach(img => {
+                img.addEventListener('click', () => {
+                    lightbox.classList.add('show');
+                    fullImg.src = img.src;
+                });
+            });
+
+            lightbox.addEventListener('click', () => {
+                lightbox.classList.remove('show');
+            });
+        }
+    </script>
+</body>
+</html>
