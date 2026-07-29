@@ -1,9 +1,94 @@
 [
+    {
+    "id": "gra-cyfrowo",
+    "title": "Cyfrowo - .NET MAUI",
+    "description": "Aplikacja mobilno-desktopowa w C#.",
+    "longDescription": "Multiplatformowa gra typu Mastermind stworzona w C# i .NET MAUI, polegająca na odgadnięciu tajnego kodu na trzech poziomach trudności. Interfejs wzbogacony jest o płynne animacje oraz intuicyjne podświetlenia w kolorach żółtym i zielonym.",
+    "mainImage": "CyfrowoScreens/CyfrowoMain.png",
+    "gallery": [
+      "CyfrowoScreens/CyfrowoScreen1.png",
+      "CyfrowoScreens/CyfrowoScreen2.png",
+      "CyfrowoScreens/CyfrowoScreen3.png"
+    ],
+    "downloadLink": "https://drive.google.com/file/d/1FB22lLvfKBRTD0tDv_RCzROrR2XX77vB/view?usp=sharing",
+    "link": "projekt.html?id=gra-cyfrowo"
+  },
   {
+    "id": "gra-kolko-i-krzyzyk",
+    "title": "Kółko i Krzyżyk - .NET MAUI",
+    "description": "Aplikacja mobilno-desktopowa w C#.",
+    "longDescription": "Klasyczna gra kółko i krzyżyk napisana w .NET MAUI, wyposażona w autorską sztuczną inteligencję o trzech poziomach trudności. Aplikacja posiada przejrzysty interfejs oraz wbudowany system zliczania statystyk rozgrywek.",
+    "mainImage": "TicTacToeScreens/TicTacToeMain.png",
+    "gallery": [
+      "TicTacToeScreens/TicTacToeScreen1.png",
+      "TicTacToeScreens/TicTacToeScreen2.png",
+      "TicTacToeScreens/TicTacToeScreen3.png"
+    ],
+    "downloadLink": "https://drive.usercontent.google.com/download?id=1fp5VbnkfT84eogqJOndsWqafpeKM0OAZ&export=download&authuser=0",
+    "link": "projekt.html?id=gra-kolko-i-krzyzyk"
+  },
+    {
+    "id": "todo-app",
+    "title": "TodoAPP - C# / WPF",
+    "description": "Prototyp aplikacji do zarządzania zadaniami",
+    "longDescription": "Minimalistyczny prototyp aplikacji do zarządzania zadaniami stworzony w technologii WPF i C#. Umożliwia sprawne dodawanie nowych pozycji przez pole tekstowe oraz oznaczanie ich jako ukończone lub ich usuwanie.",
+    "mainImage": "TodoScreens/TodoMain.png",
+    "gallery": [
+      "TodoScreens/TodoMain.png",
+      "TodoScreens/Todo1.png",
+      "TodoScreens/Todo2.png"
+    ],
+    "downloadLink": "https://drive.google.com/file/d/1onkjzSPQhpRmkLPxzlsu3z5JsopGbXo2/view?usp=sharing",
+    "link": "projekt.html?id=todo-app"
+  },
+  {
+    "id": "menu-horror",
+    "title": "Horror Game Menu - Unity",
+    "description": "Proste menu główne gry typu horror",
+    "longDescription": "Klimatyczne menu główne gry horror stworzone w silniku Unity, wyróżniające się mroczną estetyką, nastrojową muzyką i animowanym tłem. Zawiera w pełni funkcjonalny system konfiguracji audio oraz ustawień rozdzielczości ekranu.",
+    "mainImage": "MenuHorrorScreens/MenuMain.png",
+    "gallery": [
+      "MenuHorrorScreens/Menu1.png",
+      "MenuHorrorScreens/Menu2.png",
+      "MenuHorrorScreens/Menu3.png"
+    ],
+    "downloadLink": "https://drive.google.com/file/d/1nO5R0SD6-XOiQIuxEJFw0fGw7zbdLXDk/view?usp=sharing",
+    "link": "projekt.html?id=menu-horror"
+  },
+  {
+    "id": "frogger-game",
+    "title": "Gra Frogger - Unity",
+    "description": "Odwzorowanie popularnej gry 2D Frogger",
+    "longDescription": "Odtworzenie kultowej gry zręcznościowej w 2D, w której zadaniem żabki jest bezpieczne przejście na drugą stronę ruchliwej jezdni. Projekt posiada prosty ekran startowy oraz system zliczający liczbę ruchów potrzebnych do osiągnięcia celu.",
+    "mainImage": "FroggerScreens/FroggerMain.png",
+    "gallery": [
+      "FroggerScreens/Frogger1.png",
+      "FroggerScreens/Frogger2.png",
+      "FroggerScreens/Frogger3.png"
+    ],
+    "downloadLink": "https://drive.google.com/file/d/1GMjMedMHCQC07nSa5l0KrevZ1Xf40RjW/view?usp=sharing",
+    "link": "projekt.html?id=frogger-game"
+  },
+{
+    "id": "ai-agents",
+    "title": "AI Agents - Unity",
+    "description": "AI agents stworzone w Unity.",
+    "longDescription": "Symulacja w silniku Unity przedstawiająca system agentów AI w rzucie z góry. Na planszy pojawia się kilkanaście autonomicznych postaci, które sprawnie nawigują w kierunku wyznaczonych punktów, omijając pola śmierci oraz ruchomą bramę.",
+    "mainImage": "AiAgentsScreens/AgentsScreenMain.png",
+    "gallery": [
+      "AiAgentsScreens/AgentsScreen1.png",
+      "AiAgentsScreens/AgentsScreen2.png",
+      "AiAgentsScreens/AgentsScreen3.png"
+    ],
+    "downloadLink": "https://drive.google.com/file/d/1dxp2XQyecsDdTnlfMJ6FBb9-hIUFMtSg/view?usp=sharing",
+    "link": "projekt.html?id=ai-agents"
+  },
+
+{
     "id": "projekt-reset",
-    "title": "Projekt Reset",
+    "title": "Projekt Reset - JS / PlayCanvas",
     "description": "Gra platformowa 2D stworzona w silniku PlayCanvas.",
-    "longDescription": "Project Reset to dynamiczna platformówka 2D typu „Die & Retry”, w której wcielasz się w cyfrową anomalię uwięzioną wewnątrz niebezpiecznego systemu...",
+    "longDescription": "Dynamiczna gra platformowa 2D typu „Die & Retry” stworzona w silniku PlayCanvas przy użyciu JavaScriptu. Sterując kostką w sterylnym klimacie laboratorium, gracz omija piły i lasery, zbiera znajdźki oraz pokonuje trzy poziomy. Rozgrywka śledzi czas, liczbę śmierci oraz zdobyte punkty.",
     "mainImage": "PlayCanvasScreens/PlayCanvasScreenMenu.png",
     "gallery": [
       "PlayCanvasScreens/PlayCanvasScreen1.png",
@@ -12,33 +97,6 @@
     ],
     "downloadLink": "https://drive.google.com/uc?export=download&id=1Z4QfqwbSeIE14-UkWa-vvfAwwhRGz9v3",
     "link": "projekt.html?id=projekt-reset"
-  },
-  {
-    "id": "gra-cyfrowo",
-    "title": "Cyfrowo - .NET MAUI",
-    "description": "Aplikacja mobilno-desktopowa w C#.",
-    "longDescription": "Opis aplikacji w C# i .NET MAUI, jej funkcjonalności oraz struktury.",
-    "mainImage": "CyfrowoScreens/CyfrowoMain.png",
-    "gallery": [
-      "CyfrowoScreens/CyfrowoScreen1.png",
-      "CyfrowoScreens/CyfrowoScreen2.png",
-      "CyfrowoScreens/CyfrowoScreen3.png"
-    ],
-    "downloadLink": "downloads/Cyfrowo.zip",
-    "link": "projekt.html?id=gra-cyfrowo"
-  },
-  {
-    "id": "gra-kolko-i-krzyzyk",
-    "title": "Kółko i Krzyżyk - .NET MAUI",
-    "description": "Aplikacja mobilno-desktopowa w C#.",
-    "longDescription": "Opis aplikacji w C# i .NET MAUI, jej funkcjonalności oraz struktury.",
-    "mainImage": "TicTacToeScreens/TicTacToeMain.png",
-    "gallery": [
-      "TicTacToeScreens/TicTacToeScreen1.png",
-      "TicTacToeScreens/TicTacToeScreen2.png",
-      "TicTacToeScreens/TicTacToeScreen3.png"
-    ],
-    "downloadLink": "downloads/TicTacToeApp.zip",
-    "link": "projekt.html?id=gra-kolko-i-krzyzyk"
   }
+
 ]

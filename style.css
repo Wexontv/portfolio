@@ -1,6 +1,3 @@
-/* =========================================
-   1. Reset i ustawienia globalne
-   ========================================= */
 * {
     margin: 0;
     padding: 0;
@@ -14,9 +11,6 @@ body {
     background-color: #f4f6f8;
 }
 
-/* =========================================
-   2. Nawigacja (Menu)
-   ========================================= */
 nav {
     position: fixed;
     top: 0;
@@ -53,9 +47,6 @@ nav ul li a:hover {
     color: #3498db;
 }
 
-/* =========================================
-   3. Sekcja powitalna (Hero)
-   ========================================= */
 header {
     margin-top: 60px;
     padding: 80px 20px;
@@ -121,9 +112,6 @@ header {
     background: #2980b9;
 }
 
-/* =========================================
-   4. Sekcja Projektów
-   ========================================= */
 section {
     padding: 80px 20px;
     max-width: 1000px;
@@ -177,8 +165,6 @@ section h2 {
     align-items: center;
     text-align: center;
     transition: opacity 0.3s;
-    
-    /* Dodany bezpieczny margines wewnętrzny, aby napisy nie dotykały krawędzi */
     padding: 20px;
 }
 
@@ -196,9 +182,6 @@ section h2 {
     color: #ddd;
 }
 
-/* =========================================
-   5. Modal / Lightbox dla zdjęcia profilowego
-   ========================================= */
 .modal {
     display: none;
     position: fixed;
@@ -223,9 +206,6 @@ section h2 {
     border-radius: 8px;
 }
 
-/* =========================================
-   6. Stopka (Footer)
-   ========================================= */
 footer {
     background: rgb(37, 55, 71);
     color: white;
@@ -252,4 +232,41 @@ footer {
 
 .social-links a:hover {
     text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 0 20px;
+    }
+
+    .logo-link {
+        font-size: 1.2rem;
+    }
+
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .profilowe {
+        width: 180px;
+        height: 180px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-text h2 {
+        font-size: 1.2rem;
+    }
+
+    .projekty-grid {
+        grid-template-columns: 1fr; 
+    }
+
+    section {
+        padding: 40px 15px;
+    }
 }

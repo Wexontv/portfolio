@@ -1,0 +1,107 @@
+@import url('style.css');
+
+.project-header {
+    background: #2c3e50;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.main-screen {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.project-desc {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.gallery {
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.gallery .projekty-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery .kafelek {
+    background-color: transparent;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.gallery .kafelek img {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.modal.show { display: flex; }
+
+.kafelek:hover {
+    cursor: pointer;
+}
+
+.btn-download {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #2ecc71;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+.btn-download:hover {
+    background: #27ae60;
+}
+
+@media (max-width: 768px) {
+    .project-header {
+        padding: 40px 15px;
+    }
+
+    .project-desc h1 {
+        font-size: 1.8rem;
+    }
+
+    .gallery .projekty-grid {
+        grid-template-columns: 1fr; 
+    }
+
+    .gallery {
+        padding: 30px 15px;
+    }
+}
