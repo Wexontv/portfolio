@@ -28,6 +28,7 @@
     margin: auto;
 }
 
+/* KOMPUTER: Zawsze 3 kolumny w siatce */
 .gallery .projekty-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -98,7 +99,16 @@
     }
 
     .gallery .projekty-grid {
-        grid-template-columns: 1fr;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px !important;
+    }
+
+    .gallery .kafelek img {
+        height: auto !important;
+        max-height: 450px !important;
+        object-fit: contain !important;
+        background-color: #f8f9fa;
     }
 
     .gallery {
