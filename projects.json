@@ -97,6 +97,20 @@
     ],
     "downloadLink": "https://drive.google.com/uc?export=download&id=1Z4QfqwbSeIE14-UkWa-vvfAwwhRGz9v3",
     "link": "projekt.html?id=projekt-reset"
+  },
+  {
+    "id": "languages-app",
+    "title": "Aplikacja edukacyjna - Figma",
+    "description": "Projekt aplikacji do nauki języków obcych zaprojektowany w figmie.",
+    "longDescription": "Prototyp interaktywnej aplikacji do nauki języków obcych, zaprojektowany w całości w programie Figma. Projekt skupia się na prostym, nowoczesnym interfejsie i optymalnym UX/UI, ze szczególnym naciskiem na wysoką dostępność dla każdego użytkownika.",
+    "mainImage": "LanguagesAppScreens/ScreenMain.png",
+    "gallery": [
+      "LanguagesAppScreens/Screen1.png",
+      "LanguagesAppScreens/Screen2.png",
+      "LanguagesAppScreens/Screen3.png"
+    ],
+    "downloadLink": "https://drive.google.com/file/d/1pLIkaSIosOBjqWSbKdxx4Gsl0Bu-R1T8/view?usp=sharing",
+    "link": "projekt.html?id=languages-app"
   }
 
 ]
