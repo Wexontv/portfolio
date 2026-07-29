@@ -30,7 +30,7 @@
 
 .gallery .projekty-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
@@ -43,7 +43,7 @@
 .gallery .kafelek img {
     display: block;
     width: 100%;
-    height: 220px;
+    height: 180px;
     object-fit: cover;
     border-radius: 8px;
 }
@@ -86,4 +86,22 @@
 
 .btn-download:hover {
     background: #27ae60;
+}
+
+@media (max-width: 768px) {
+    .project-header {
+        padding: 40px 15px;
+    }
+
+    .project-desc h1 {
+        font-size: 1.8rem;
+    }
+
+    .gallery .projekty-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        padding: 30px 15px;
+    }
 }
