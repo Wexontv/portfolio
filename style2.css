@@ -97,7 +97,7 @@
         font-size: 1.8rem;
     }
 
-    .gallery .projekty-grid {
+    div.projekty-grid {
         grid-template-columns: 1fr !important;
     }
 
