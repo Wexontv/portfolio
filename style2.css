@@ -1,9 +1,15 @@
 @import url('style.css');
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 .project-header {
     background: #2c3e50;
     color: white;
-    padding: 80px 20px;
+    padding: 60px 15px 30px 15px;
     text-align: center;
     margin-top: 60px;
 }
@@ -20,12 +26,14 @@
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
+    padding: 0 15px;
 }
 
 .gallery {
-    padding: 50px 20px;
+    padding: 40px 15px;
     max-width: 1000px;
-    margin: auto;
+    margin: 0 auto;
+    flex: 1; 
 }
 
 .gallery .projekty-grid {
@@ -74,13 +82,13 @@
 
 .btn-download {
     display: inline-block;
-    padding: 15px 30px;
+    padding: 12px 25px;
     background: #2ecc71;
     color: white;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    margin-top: 20px;
+    margin: 20px 0 40px 0;
     transition: background 0.3s;
 }
 
@@ -90,15 +98,20 @@
 
 @media (max-width: 768px) {
     .project-header {
-        padding: 40px 15px;
+        padding: 40px 15px 20px 15px;
     }
 
     .project-desc h1 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+    }
+
+    .project-desc p {
+        font-size: 0.95rem;
     }
 
     .gallery .projekty-grid {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
+        gap: 15px;
     }
 
     .gallery {
