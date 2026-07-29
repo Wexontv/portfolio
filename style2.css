@@ -30,7 +30,7 @@
 
 .gallery .projekty-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
@@ -43,9 +43,8 @@
 .gallery .kafelek img {
     display: block;
     width: 100%;
-    height: 240px;
-    object-fit: contain;
-    background-color: #f8f9fa;
+    height: 180px;
+    object-fit: cover;
     border-radius: 8px;
 }
 
@@ -96,6 +95,19 @@
 
     .project-desc h1 {
         font-size: 1.8rem;
+    }
+
+    .gallery .projekty-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px !important;
+    }
+
+    .gallery .kafelek img {
+        height: auto !important;
+        max-height: 500px !important;
+        object-fit: contain !important;
+        background-color: #f8f9fa;
     }
 
     .gallery {
